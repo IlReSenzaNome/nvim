@@ -27,11 +27,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons' 
 " goyo
 Plug 'junegunn/goyo.vim' 
-" nvim-dap-ui
-Plug 'mfussenegger/nvim-dap'
-Plug 'rcarriga/nvim-dap-ui' 
-" lualine
-Plug 'nvim-lualine/lualine.nvim'
+
 
 call plug#end()
 " Theme configuration
