@@ -27,7 +27,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons' 
 " goyo
 Plug 'junegunn/goyo.vim' 
-
+" Git
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 " Theme configuration
