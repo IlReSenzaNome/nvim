@@ -50,5 +50,4 @@ let g:airline#extensions#tabline#enabled = 1
 let NERDTreeQuitOnOpen=1
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR> 
-
-
+ 
