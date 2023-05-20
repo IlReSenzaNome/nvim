@@ -16,12 +16,15 @@ call plug#begin ('~/AppData/Local/nvim/plugged')
 " auto-complete pairs 
 Plug 'chun-yang/auto-pairs',
 " Themes for nvim 
-Plug 'sainnhe/gruvbox-material'
+" Plug 'sainnhe/gruvbox-material'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Ident formater text
 Plug 'Yggdroot/indentLine' 
 " State Bar
-Plug 'vim-airline/vim-airline' 
+" Plug 'vim-airline/vim-airline' 
+Plug 'nvim-lualine/lualine.nvim'
+
 " Gestor Archivos
 Plug 'scrooloose/nerdtree'
 " dev-icons
@@ -41,8 +44,8 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 " Theme configuration
 set background=dark
-let g:gruvbox_materia_background='medium' 
-colorscheme gruvbox-material 
+" let g:gruvbox_materia_background='medium' 
+" colorscheme gruvbox-material 
 
 
 " configuration airline
@@ -52,4 +55,11 @@ let g:airline#extensions#tabline#enabled = 1
 let NERDTreeQuitOnOpen=1
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR> 
- 
+
+lua << END
+require('lualine').setup()
+END
+
+colorscheme tokyonight
+colorscheme tokyonight-night
+
