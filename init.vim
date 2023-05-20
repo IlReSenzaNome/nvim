@@ -43,7 +43,7 @@ call plug#end()
 set background=dark
 let g:gruvbox_materia_background='medium' 
 colorscheme gruvbox-material 
- 
+
 
 " configuration airline
 let g:airline#extensions#tabline#enabled = 1
