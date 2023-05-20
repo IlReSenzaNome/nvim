@@ -17,7 +17,6 @@ call plug#begin ('~/AppData/Local/nvim/plugged')
 Plug 'chun-yang/auto-pairs',
 " Themes for nvim 
 Plug 'sainnhe/gruvbox-material'
-Plug 'joshdick/onedark.vim'
 
 " Ident formater text
 Plug 'Yggdroot/indentLine' 
@@ -42,10 +41,9 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 " Theme configuration
 set background=dark
-" let g:gruvbox_materia_background='medium' 
-" colorscheme gruvbox-material 
-let g:onedark_termcolors=256 
-colorscheme onedark 
+let g:gruvbox_materia_background='medium' 
+colorscheme gruvbox-material 
+ 
 
 " configuration airline
 let g:airline#extensions#tabline#enabled = 1
