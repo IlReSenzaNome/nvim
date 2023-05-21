@@ -40,26 +40,42 @@ Plug 'tpope/vim-fugitive'
 " Or build from source code by using yarn: https://yarnpkg.com
 " Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
+" 
 
-call plug#end()
+call plug#end() 
+
 " Theme configuration
 set background=dark
 " let g:gruvbox_materia_background='medium' 
 " colorscheme gruvbox-material 
-
+colorscheme tokyonight 
+colorscheme tokyonight-night
 
 " configuration airline
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " configuration nerdtree 
 let NERDTreeQuitOnOpen=1
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR> 
 
+" Config lualine 
 lua << END
-require('lualine').setup()
-END
+require("lualine").setup {
 
-colorscheme tokyonight
-colorscheme tokyonight-night
+  options = {
+    theme = "tokyonight",
+    icons_enabled = true,
+  }, 
+  sections = {
+    lualine_a = { "mode" },
+    lualine_b = { "filename" },
+    lualine_c = { "g:coc_status" },
+    lualine_x = { "branch" },
+    lualine_y = { "encoding" },
+    lualine_z = { "location" }
+  }
+}
+END
+ 
 
