@@ -1,10 +1,13 @@
 " Configuration NeoVim for IlReSenzaNome encodin prepare for microcontrolator 
+"  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 "   ___ _ ____      ____                      _   _
 "  |_ _| |  _ \ ___/ ___|  ___ _ __  ______ _| \ | | ___  _ __ ___   ___
 "   | || | |_) / _ \___ \ / _ \ '_ \|_  / _` |  \| |/ _ \| '_ ` _ \ / _ \
 "   | || |  _ <  __/___) |  __/ | | |/ / (_| | |\  | (_) | | | | | |  __/
 "  |___|_|_| \_\___|____/ \___|_| |_/___\__,_|_| \_|\___/|_| |_| |_|\___|
-"  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+"  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+" simbolic enlace for coc configuration nvim 
+" ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 set number relativenumber   " Relative numbers for jumping
 set nu rnu " turn hybrid line numbers on
 syntax enable " Syntax color enable for more programing lenguajes 
@@ -36,12 +39,10 @@ Plug 'ryanoasis/vim-devicons'
 " goyo
 Plug 'junegunn/goyo.vim' 
 " Git
-Plug 'tpope/vim-fugitive' 
+Plug 'tpope/vim-fugitive'
 " COC
 " Use release branch (recommended)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Or build from source code by using yarn: https://yarnpkg.com
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 " Navigation file 
 Plug 'christoomey/vim-tmux-navigator' 
 " Buftabline 
