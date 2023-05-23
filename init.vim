@@ -1,11 +1,11 @@
 " Configuration NeoVim for IlReSenzaNome encodin prepare for microcontrolator 
-"  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+" ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 "   ___ _ ____      ____                      _   _
 "  |_ _| |  _ \ ___/ ___|  ___ _ __  ______ _| \ | | ___  _ __ ___   ___
 "   | || | |_) / _ \___ \ / _ \ '_ \|_  / _` |  \| |/ _ \| '_ ` _ \ / _ \
 "   | || |  _ <  __/___) |  __/ | | |/ / (_| | |\  | (_) | | | | | |  __/
 "  |___|_|_| \_\___|____/ \___|_| |_/___\__,_|_| \_|\___/|_| |_| |_|\___|
-"  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+" :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
 " simbolic enlace for coc configuration nvim 
 " ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 set number relativenumber   " Relative numbers for jumping
@@ -32,7 +32,7 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'Yggdroot/indentLine' 
 " State Bar
 Plug 'nvim-lualine/lualine.nvim'
-" Gestor Archivos
+" Gestor Archivossjlkjk
 Plug 'scrooloose/nerdtree'
 " dev-icons
 Plug 'ryanoasis/vim-devicons' 
@@ -40,13 +40,16 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim' 
 " Git
 Plug 'tpope/vim-fugitive'
-" COC
-" Use release branch (recommended)
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 " Navigation file 
 Plug 'christoomey/vim-tmux-navigator' 
 " Buftabline 
-Plug 'ap/vim-buftabline' 
+Plug 'ap/vim-buftabline'
+" Markdown  
+Plug 'bbrtj/vim-vorg-md'
+" Floating Terminal  
+Plug 'voldikss/vim-floaterm'  
+" Snippets 
+Plug 'honza/vim-snippets' 
 call plug#end() 
 " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -64,7 +67,13 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 " buftabline 
 set hidden
 nnoremap <C-N> :bnext<CR> 
-nnoremap <C-P> :bprev<CR> 
+nnoremap <C-P> :bprev<CR>
+
+" Configuration flaterm example
+let g:floaterm_keymap_new    = '<C-T>'
+let g:floaterm_keymap_prev   = '<C-C>'
+let g:floaterm_keymap_next   = '<C-Q>'
+let g:floaterm_keymap_toggle = '<C-W>'
 
 " Config lualine 
 lua << END
@@ -76,7 +85,7 @@ require("lualine").setup {
   }, 
   sections = {
     lualine_a = { "mode" },
-   lualine_b = { "filename" },
+    lualine_b = { "filename" },
     lualine_c = { "g:coc_status" },
     lualine_x = { "branch" },
     lualine_y = { "encoding" },
