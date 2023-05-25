@@ -25,15 +25,17 @@ set termguicolors " Acrive true color or terminar
 " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
 call plug#begin ('~/AppData/Local/nvim/plugged') 
 " auto-complete pairs 
-Plug 'chun-yang/auto-pairs',
+Plug 'jiangmiao/auto-pairs' 
 " Themes for nvim 
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 " Ident formater text
 Plug 'Yggdroot/indentLine' 
 " State Bar
 Plug 'nvim-lualine/lualine.nvim'
-" Gestor Archivossjlkjk
-Plug 'scrooloose/nerdtree'
+" Gestor Archivos
+Plug 'scrooloose/nerdtree' 
+" Nerd Comment
+Plug 'preservim/nerdcommenter'
 " dev-icons
 Plug 'ryanoasis/vim-devicons' 
 " goyo
@@ -48,8 +50,12 @@ Plug 'ap/vim-buftabline'
 Plug 'bbrtj/vim-vorg-md'
 " Floating Terminal  
 Plug 'voldikss/vim-floaterm'  
-" Snippets 
-Plug 'honza/vim-snippets' 
+" Polyglot 
+Plug 'sheerun/vim-polyglot'
+" fzf 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" 
 call plug#end() 
 " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -69,11 +75,14 @@ set hidden
 nnoremap <C-N> :bnext<CR> 
 nnoremap <C-P> :bprev<CR>
 
-" Configuration flaterm example
+" Configuration floaterm example 
 let g:floaterm_keymap_new    = '<C-T>'
-let g:floaterm_keymap_prev   = '<C-C>'
+let g:floaterm_keymap_prev   = '<C-A>'
 let g:floaterm_keymap_next   = '<C-Q>'
 let g:floaterm_keymap_toggle = '<C-W>'
+
+" NerdComments
+nnoremap <C-C> <plug>NERDCommenterToggle
 
 " Config lualine 
 lua << END
