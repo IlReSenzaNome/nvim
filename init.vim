@@ -22,6 +22,8 @@ set splitbelow splitright " Comand line launch for one comand
 set clipboard=unnamed " Using clipboard
 set termguicolors " Acrive true color or terminar
 
+so ~/Appdata/Local/nvim/coc.vim
+
 " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
 call plug#begin ('~/AppData/Local/nvim/plugged') 
 " auto-complete pairs 
@@ -41,7 +43,9 @@ Plug 'ryanoasis/vim-devicons'
 " goyo
 Plug 'junegunn/goyo.vim' 
 " Git
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive' 
+" Git-gitgutter
+Plug 'airblade/vim-gitgutter'
 " Navigation file 
 Plug 'christoomey/vim-tmux-navigator' 
 " Buftabline 
@@ -55,6 +59,8 @@ Plug 'sheerun/vim-polyglot'
 " fzf 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+" Coc 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " 
 call plug#end() 
 " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -83,6 +89,8 @@ let g:floaterm_keymap_toggle = '<C-W>'
 
 " NerdComments
 nnoremap <C-C> <plug>NERDCommenterToggle
+
+" 
 
 " Config lualine 
 lua << END
