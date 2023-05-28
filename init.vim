@@ -5,8 +5,14 @@
 "   | || | |_) / _ \___ \ / _ \ '_ \|_  / _` |  \| |/ _ \| '_ ` _ \ / _ \
 "   | || |  _ <  __/___) |  __/ | | |/ / (_| | |\  | (_) | | | | | |  __/
 "  |___|_|_| \_\___|____/ \___|_| |_/___\__,_|_| \_|\___/|_| |_| |_|\___|
-" :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-" simbolic enlace for coc configuration nvim 
+" ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+" ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+" ██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
+" ██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
+" ██║██╔██╗██║██║░░░██║░░░░░░╚██╗░██╔╝██║██╔████╔██║
+" ██║██║╚████║██║░░░██║░░░░░░░╚████╔╝░██║██║╚██╔╝██║
+" ██║██║░╚███║██║░░░██║░░░██╗░░╚██╔╝░░██║██║░╚═╝░██║ 
+" ╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝ 
 " ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 set number relativenumber   " Relative numbers for jumping
 set nu rnu " turn hybrid line numbers on
@@ -21,8 +27,11 @@ set softtabstop=2 " remove a full pseudo-TAB when i press <BS>
 set splitbelow splitright " Comand line launch for one comand 
 set clipboard=unnamed " Using clipboard
 set termguicolors " Acrive true color or terminar
-
+set hidden 
+" simbolic enlace for coc configuration nvim
 so ~/Appdata/Local/nvim/coc.vim
+
+let mapleader = ","
 
 " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
 call plug#begin ('~/AppData/Local/nvim/plugged') 
@@ -30,56 +39,64 @@ call plug#begin ('~/AppData/Local/nvim/plugged')
 Plug 'jiangmiao/auto-pairs' 
 " Themes for nvim 
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-" Ident formater text
-Plug 'Yggdroot/indentLine' 
+" Ident formater text 
+Plug 'lukas-reineke/indent-blankline.nvim'
 " State Bar
 Plug 'nvim-lualine/lualine.nvim'
 " Gestor Archivos
-Plug 'scrooloose/nerdtree' 
+Plug 'preservim/nerdtree' 
 " Nerd Comment
 Plug 'preservim/nerdcommenter'
 " dev-icons
 Plug 'ryanoasis/vim-devicons' 
-" goyo
-Plug 'junegunn/goyo.vim' 
-" Git
-Plug 'tpope/vim-fugitive' 
+Plug 'nvim-tree/nvim-web-devicons'
 " Git-gitgutter
 Plug 'airblade/vim-gitgutter'
 " Navigation file 
 Plug 'christoomey/vim-tmux-navigator' 
-" Buftabline 
-Plug 'ap/vim-buftabline'
+" Bufferline
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 " Markdown  
 Plug 'bbrtj/vim-vorg-md'
 " Floating Terminal  
 Plug 'voldikss/vim-floaterm'  
 " Polyglot 
 Plug 'sheerun/vim-polyglot'
-" fzf 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 " Coc 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+" or                                , { 'branch': '0.1.x' }
+Plug 'nvim-treesitter/nvim-treesitter' 
+" Lsp
+Plug 'neovim/nvim-lspconfig'
+" Toruble Errors 
+Plug 'folke/trouble.nvim'
 " 
 call plug#end() 
 " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-" :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-" Theme configuration
-set background=dark
+ 
+" ::::::::::::::::::::: :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+" Setid using keyboard  insert mode 
+inoremap <C-H> <left>   
+inoremap <C-J> <down>     
+inoremap <C-K> <up>    
+inoremap <C-L> <right> 
+" Theme configuration   
+set background=dark 
 colorscheme tokyonight 
 colorscheme tokyonight-night
+" Lsp 
+lua << END
+require'lspconfig'.pyright.setup{"pyright-langserver", "--stdio"} 
+require'lspconfig'.ccls.setup{"ccls"}
+END
 
 " configuration nerdtree 
 let NERDTreeQuitOnOpen=1
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
-
-" buftabline 
-set hidden
-nnoremap <C-N> :bnext<CR> 
-nnoremap <C-P> :bprev<CR>
 
 " Configuration floaterm example 
 let g:floaterm_keymap_new    = '<C-T>'
@@ -90,10 +107,40 @@ let g:floaterm_keymap_toggle = '<C-W>'
 " NerdComments
 nnoremap <C-C> <plug>NERDCommenterToggle
 
-" 
+" Telescope  
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Config lualine 
 lua << END
+-- blankline
+require("indent_blankline").setup {
+    -- for example, context is off by default, use this to turn it on
+    space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+}
+-- bufferline
+require("bufferline").setup{}
+-- trouble settings
+require("trouble").setup()
+local actions = require("telescope.actions")
+local trouble = require("trouble.providers.telescope")
+
+local telescope = require("telescope")
+
+telescope.setup {
+  defaults = {
+    mappings = {
+      i = { ["<c-t>"] = trouble.open_with_trouble },
+      n = { ["<c-t>"] = trouble.open_with_trouble },
+    },
+  },
+}
+
 require("lualine").setup {
 
   options = {
@@ -107,6 +154,6 @@ require("lualine").setup {
     lualine_x = { "branch" },
     lualine_y = { "encoding" },
     lualine_z = { "location" }
-  }
+  },
 }
 END

@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-clangd', 'coc-json', 'coc-prettier' ]
+let g:coc_global_extensions = ['coc-json', 'coc-prettier' ]
 
 " Mappings Go To's
 nmap <silent> gd <Plug>(coc-definition)
