@@ -39,8 +39,8 @@ call plug#begin ('~/AppData/Local/nvim/plugged')
 Plug 'jiangmiao/auto-pairs' 
 " Themes for nvim 
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-" Ident formater text 
-Plug 'lukas-reineke/indent-blankline.nvim'
+" Ident formater text
+Plug 'lukas-reineke/indent-blankline.nvim' 
 " State Bar
 Plug 'nvim-lualine/lualine.nvim'
 " Gestor Archivos
