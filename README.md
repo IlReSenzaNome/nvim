@@ -1,9 +1,11 @@
 # Configuration NeoVim
 
 Configuration of the plain text editor NeoVim to make code for proper systems with the necessary plugins to start working including some configuration of keyboard shortcuts.
+
 <a href="https://dotfyle.com/CoolPlayLin/coolplaylin-src-nvim"><img src="https://dotfyle.com/CoolPlayLin/coolplaylin-src-nvim/badges/plugins?style=flat" /></a>
 <a href="https://dotfyle.com/CoolPlayLin/coolplaylin-src-nvim"><img src="https://dotfyle.com/CoolPlayLin/coolplaylin-src-nvim/badges/leaderkey?style=flat" /></a>
 <a href="https://dotfyle.com/CoolPlayLin/coolplaylin-src-nvim"><img src="https://dotfyle.com/CoolPlayLin/coolplaylin-src-nvim/badges/plugin-manager?style=flat" /></a>
+
 Before editor settings: 
 ![Images for unsing this configuration with neovim mark to workspace clicket to changest](/img/workspace-style-for-nvim.png)
 
