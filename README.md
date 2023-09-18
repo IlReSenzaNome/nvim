@@ -1,13 +1,15 @@
 # Configuration NeoVim
+---
+Configuration basic for programing microcontrolers
 
-Configuration of the plain text editor NeoVim to make code for proper systems with the necessary plugins to start working including some configuration of keyboard shortcuts.
-
-![Plugins](https://img.shields.io/badge/Plugins%20install-19-green?style=cuadrado&logo=vim&logoColor=blue) 
+![Plugins](https://img.shields.io/badge/Plugins%20install-19-green?        style=cuadrado&logo=vim&logoColor=blue) 
 ![leader key](https://img.shields.io/badge/Leader%20key-space-green?style=cuadrado&logo=vim&logoColor=blue)
+![Plugin Management](https://img.shields.io/badge/Plugin%20Management-Vim%20Plug-green?style=cuadrado&logo=vim&logoColor=blue)
 
+# Editor Appearence
+--
 Before editor settings:
 
-![Images for unsing this configuration with neovim mark to workspace clicket to changest](C:\Users\DELL\Downloads\Programaing-Lenguajes\nvim\img\workspace-style-for-nvim.png)
 
 # Install dependences for plugins
 
