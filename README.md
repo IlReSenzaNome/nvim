@@ -1,5 +1,4 @@
 # Configuration NeoVim
----
 Configuration basic for programing microcontrolers
 
 ![Plugins](https://img.shields.io/badge/Plugins%20install-19-green?        style=cuadrado&logo=vim&logoColor=blue) 
