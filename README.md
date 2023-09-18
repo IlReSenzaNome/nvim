@@ -1,14 +1,20 @@
 # Configuration NeoVim
-Configuration basic for programing microcontrolers
+
+Basic configuration for programming microcontrollers that can be used in mechatronic engineering.
 
 ![Plugins](https://img.shields.io/badge/Plugins%20install-19-green?style=cuadrado&logo=vim&logoColor=blue)
 ![leader key](https://img.shields.io/badge/Leader%20key-space-green?style=cuadrado&logo=vim&logoColor=blue)
 ![Plugin Management](https://img.shields.io/badge/Plugin%20Management-Vim%20Plug-green?style=cuadrado&logo=vim&logoColor=blue)
 
-# Editor Appearence
---
-Before editor settings:
+# Table of contents
 
+- [Editor Appearance](#editor-appearance)
+
+# Editor Appearance
+
+:
+
+![]
 
 # Install dependences for plugins
 
