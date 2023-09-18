@@ -2,7 +2,8 @@
 
 Configuration of the plain text editor NeoVim to make code for proper systems with the necessary plugins to start working including some configuration of keyboard shortcuts.
 
-![Plugins](https://img.shields.io/badge/Plugins%20install-19-green?style=cuadrado&logo=vim&logoColor=blue)
+![Plugins](https://img.shields.io/badge/Plugins%20install-19-green?style=cuadrado&logo=vim&logoColor=blue) 
+![leader key](https://img.shields.io/badge/Leader%20key-space-green?style=cuadrado&logo=vim&logoColor=blue)
 
 Before editor settings:
 
