@@ -2,8 +2,11 @@
 
 Configuration of the plain text editor NeoVim to make code for proper systems with the necessary plugins to start working including some configuration of keyboard shortcuts.
 
-![Static Badge](![Static%20Badge](https://img.shields.io/badge/Plugins%20install-19-green?style=cuadrado&logo=vim&logoColor=blue))Before editor settings: 
-![Images for unsing this configuration with neovim mark to workspace clicket to changest](/img/workspace-style-for-nvim.png)
+![Plugins]((https://img.shields.io/badge/Plugins%20install-19-green?style=cuadrado&logo=vim&logoColor=blue)
+
+Before editor settings:
+
+![Images for unsing this configuration with neovim mark to workspace clicket to changest](C:\Users\DELL\Downloads\Programaing-Lenguajes\nvim\img\workspace-style-for-nvim.png)
 
 # Install dependences for plugins
 
