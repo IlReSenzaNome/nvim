@@ -6,11 +6,18 @@ Basic configuration for programming microcontrollers that can be used in mechatr
 ![leader key](https://img.shields.io/badge/Leader%20key-space-green?style=cuadrado&logo=vim&logoColor=blue)
 ![Plugin Management](https://img.shields.io/badge/Plugin%20Management-Vim%20Plug-green?style=cuadrado&logo=vim&logoColor=blue)
 
-# Table of contents
+![Editor Style](img/)
 
+## Table of contents
+
+- [Requirements](#⚡️-requirements)
 - [Editor Appearance](#editor-appearance)
 
-# Editor Appearance
+## ⚡️ Requirements
+
+
+
+## Getting Started
 
 :
 
