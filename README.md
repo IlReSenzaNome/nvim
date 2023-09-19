@@ -36,13 +36,13 @@ You can start with the configuration as follows:
   Install configuration with <a href="https://github.com/PowerShell/PowerShell" target="_blank" rel="noopener noreferrer">Poweshell</a>
 
 1. In the terminal,
-
+   
    ```
    git clone https://github.com/IlReSenzaNome/nvim.git $env:LOCALAPPDATA\nvim
    ```
 
 2. Reload the terminal and launch nvim,
-
+   
    ```
    nvim $env:LOCALAPPDATA\nvim\init.vim
    ```
@@ -50,26 +50,26 @@ You can start with the configuration as follows:
 3. Use the following command in nvim :PlugInstall,
 
 4. Install additional dependencies for configuration,
-
+   
    <details>
    <summary>Dependencies</summary>
-
+   
    ```
    python pip -r requirements.txt
    ```
-
+   
    On linux and macOs, you can install the [fd-find](https://npm.im/fd-find) package:
-
+   
    ```
    npm install -g fd-find
    ```
-
+   
    On windows using dependencies, you ca install the ripgrep
-
+   
    ```
    winget install BurntSushi.ripgrep.MSVC
    ```
-
+   
    </details>
 
 </details>
@@ -78,13 +78,13 @@ You can start with the configuration as follows:
 <summary>Linux/MacOS</summary>
 
 1. In the terminal,
-
+   
    ```
    git clone https://github.com/IlReSenzaNome/nvim.git ~/.config/nvim
    ```
 
 2. Reload the terminal and launch nvim,
-
+   
    ```
    nvim ~/.config/nvim/init.vim
    ```
@@ -92,32 +92,32 @@ You can start with the configuration as follows:
 3. Use the following command in nvim :PlugInstall,
 
 4. Install additional dependencies for configuration,
-
+   
    <details>
    <summary>Dependencies</summary>
-
+   
    ```
    python pip -r requirements.txt
    ```
-
+   
    On linux and macOs, you can install the [fd-find](https://npm.im/fd-find) package:
-
+   
    ```
    npm install -g fd-find
    ```
-
+   
    On windows using dependencies, you ca install the [ripgrep](https://github.com/BurntSushi/ripgrep#installation) In Linux
-
+   
    ```
    sudo apt-get install ripgrep
    ```
-
+   
    In MacOS
-
+   
    ```
    brew install ripgrep
    ```
-
+   
    </details>
 
 </details>
@@ -145,7 +145,7 @@ This setup uses several key combinations to make the job of using the extensions
 | `<F2>` | Open the NerdTreeFind    | i,n,v |
 | `<F3>` | Close the NerdTreeToggle | i,n,v |
 
-### FlatTErm
+### FloatTerm
 
 | Key     | Description            | Mode  |
 | ------- | ---------------------- | ----- |
