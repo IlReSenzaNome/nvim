@@ -1,11 +1,11 @@
 # Get Started
 
-:gear: Basic configuration for programming microcontrollers that can be used in mechatronic engineering.
+⚙️ Basic configuration for programming microcontrollers that can be used in mechatronic engineering.
 
 <p align="center">
-<img alt="Plugins" src="https://img.shields.io/badge/Plugins%20install-19-green?style=cuadrado&logo=vim&logoColor=blue" />
-<img alt="leader key" src="https://img.shields.io/badge/leader%20key-%2C-green?style=square&logo=vim&logoColor=blue"> 
-<img alt="Plugin Management" src="https://img.shields.io/badge/Plugin%20Management-Vim%20Plug-green?style=cuadrado&logo=vim&logoColor=blue">
+<img alt="Plugins" src="https://img.shields.io/badge/Plugin%20Install%20-%2019%20-%20brightgreen?style=for-the-badge&logo=vim&logoColor=black&label=Plugin%20Install">
+<img alt="leader key" src="https://img.shields.io/badge/Leader%20Key%20-%20%2C%20-%20brightgreen?style=for-the-badge&logo=vim&logoColor=black&label=Plugin%20Install"> 
+<img alt="Plugin Management" src="https://img.shields.io/badge/Plugin%20Management%20-%20Vim%20Plug%20-%20brightgreen?style=for-the-badge&logo=vim&logoColor=black&label=Plugin%20Install">
 </p>
 
 ![Editor Style](img/appearence-workspace-nvim.png)
@@ -14,6 +14,9 @@
 
 - [Requirements](#⚡️-requirements)
 - [Installation](#installation)
+- [Keymaps](#⌨️-keymaps)
+- [Configuration](#⚙️-configuration)
+- [Plugins](#📦-plugins)
 
 ## ⚡️ Requirements
 
@@ -32,81 +35,101 @@ You can start with the configuration as follows:
 <summary>Windows</summary>
   Install configuration with <a href="https://github.com/PowerShell/PowerShell" target="_blank" rel="noopener noreferrer">Poweshell</a>
 
-1.  In the terminal,
+1. In the terminal,
 
-    ```
-    git clone https://github.com/IlReSenzaNome/nvim.git $env:LOCALAPPDATA\nvim
-    ```
+   ```
+   git clone https://github.com/IlReSenzaNome/nvim.git $env:LOCALAPPDATA\nvim
+   ```
 
-2.  Reload the terminal and launch nvim,
+2. Reload the terminal and launch nvim,
 
-    ```
-    nvim $env:LOCALAPPDATA\nvim\init.vim
-    ```
+   ```
+   nvim $env:LOCALAPPDATA\nvim\init.vim
+   ```
 
-3.  Use the following command in nvim :PlugInstall,
+3. Use the following command in nvim :PlugInstall,
 
-4.  Install additional dependencies for configuration,
+4. Install additional dependencies for configuration,
 
-    <details>
-    <summary>Dependencies</summary>
+   <details>
+   <summary>Dependencies</summary>
 
-    ```
-    python pip -r requirements.txt
-    ```
+   ```
+   python pip -r requirements.txt
+   ```
 
-    On linux and macOs, you can install the [fd-find](https://npm.im/fd-find) package:
+   On linux and macOs, you can install the [fd-find](https://npm.im/fd-find) package:
 
-    ```
-    npm install -g fd-find
-    ```
+   ```
+   npm install -g fd-find
+   ```
 
-    On windows using dependencies, you ca install the ripgrep
+   On windows using dependencies, you ca install the ripgrep
 
-    ```
-    winget install BurntSushi.ripgrep.MSVC
-    ```
+   ```
+   winget install BurntSushi.ripgrep.MSVC
+   ```
 
-    </details>
+   </details>
 
 </details>
 
-## Install dependences for plugins
+<details>
+<summary>Linux/MacOS</summary>
 
-## From python
+1. In the terminal,
 
-Instal dependence for coc
+   ```
+   git clone https://github.com/IlReSenzaNome/nvim.git ~/.config/nvim
+   ```
 
-```
+2. Reload the terminal and launch nvim,
 
-python pip -r requirements.txt
+   ```
+   nvim ~/.config/nvim/init.vim
+   ```
 
-```
+3. Use the following command in nvim :PlugInstall,
 
-## From npm
+4. Install additional dependencies for configuration,
 
-On linux and macOS, you can install the [fd-find](https://npm.im/fd-find) package:
+   <details>
+   <summary>Dependencies</summary>
 
-```
+   ```
+   python pip -r requirements.txt
+   ```
 
-npm install -g fd-find
+   On linux and macOs, you can install the [fd-find](https://npm.im/fd-find) package:
 
-```
+   ```
+   npm install -g fd-find
+   ```
 
-## From Chocolate
+   On windows using dependencies, you ca install the [ripgrep](https://github.com/BurntSushi/ripgrep#installation) In Linux
 
-On windows using dependences, you ca install the ripgrep
+   ```
+   sudo apt-get install ripgrep
+   ```
 
-```
+   In MacOS
 
-choco install ripgrep
-winget install BurntSushi.ripgrep.MSVC
+   ```
+   brew install ripgrep
+   ```
 
-```
+   </details>
 
-nvim $env:LOCALAPPDATA\nvim\init.vim
-Reload the terminal and launch nvim,
+</details>
 
-```
+## ⌨️ Keymaps
 
-```
+| Tables        | Are           | Cool  |
+| ------------- | ------------- | ----- |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      | $12   |
+| zebra stripes | are neat      | $1    |
+
+## ⚙️ Configuration
+
+## 📦 Plugins
