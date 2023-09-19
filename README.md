@@ -12,11 +12,11 @@
 
 ## Table of contents
 
-- [Requirements](#⚡️-requirements)
-- [Installation](#🛠️-installation)
-- [Keymaps](#⌨️-keymaps)
-- [Configuration](#⚙️-configuration)
-- [Plugins](#📦-plugins-list)
+- [Requirements](#%EF%B8%8F-requirements)
+- [Installation](#%EF%B8%8F-installation)
+- [Keymaps](#%EF%B8%8F-keymaps)
+- [Configuration](#%EF%B8%8F-configuration)
+- [Plugins](#-plugins-list)
 
 ## ⚡️ Requirements
 
