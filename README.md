@@ -3,9 +3,9 @@
 ⚙️ Basic configuration for programming microcontrollers that can be used in mechatronic engineering.
 
 <p align="center">
-<img alt="Plugins" src="https://img.shields.io/badge/Plugin%20Install%20-%2019%20-%20brightgreen?style=for-the-badge&logo=vim&logoColor=black&label=Plugin%20Install">
-<img alt="leader key" src="https://img.shields.io/badge/Leader%20Key%20-%20%2C%20-%20brightgreen?style=for-the-badge&logo=vim&logoColor=black&label=Plugin%20Install"> 
-<img alt="Plugin Management" src="https://img.shields.io/badge/Plugin%20Management%20-%20Vim%20Plug%20-%20brightgreen?style=for-the-badge&logo=vim&logoColor=black&label=Plugin%20Install">
+<img alt="Plugins" src="https://img.shields.io/badge/build%20-%2020%20-%20brightgreen?style=for-the-badge&logo=vim&logoColor=black&label=Plugin%20Install">
+<img alt="leader key" src="https://img.shields.io/badge/build-%2C-brightgreen?style=for-the-badge&logo=vim&logoColor=black&label=Leader%20key"> 
+<img alt="Plugin Management" src="https://img.shields.io/badge/build-Vim%20Plug-brightgreen?style=for-the-badge&logo=vim&logoColor=black&label=Plugin%20Managment">
 </p>
 
 ![Editor Style](img/appearence-workspace-nvim.png)
@@ -13,10 +13,10 @@
 ## Table of contents
 
 - [Requirements](#⚡️-requirements)
-- [Installation](#installation)
+- [Installation](#🛠️-installation)
 - [Keymaps](#⌨️-keymaps)
 - [Configuration](#⚙️-configuration)
-- [Plugins](#📦-plugins)
+- [Plugins](#📦-plugins-list)
 
 ## ⚡️ Requirements
 
@@ -124,12 +124,166 @@ You can start with the configuration as follows:
 
 ## ⌨️ Keymaps
 
-| Tables        | Are           | Cool  |
-| ------------- | ------------- | ----- |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      | $12   |
-| zebra stripes | are neat      | $1    |
+This setup uses several key combinations to make the job of using the extensions as easy as possible.
+
+- default <leader> is `,`
+- default <localleader> is `\`
+
+### General
+
+| Key     | Description               | Mode |
+| ------- | ------------------------- | ---- |
+| `<C-H>` | Go back in insert mode    | i    |
+| `<C-J>` | Go down in insert mode    | i    |
+| `<C-K>` | Go up in insert mode      | i    |
+| `<C-L>` | Go forward in insert mode | i    |
+
+### NerdTree
+
+| key    | Description              | Mode  |
+| ------ | ------------------------ | ----- |
+| `<F2>` | Open the NerdTreeFind    | i,n,v |
+| `<F3>` | Close the NerdTreeToggle | i,n,v |
+
+### FlatTErm
+
+| Key     | Description            | Mode  |
+| ------- | ---------------------- | ----- |
+| `<C-T>` | Create a new FloatTerm | i,n,v |
+| `<C-A>` | Preview a FloatTerm    | i,n,v |
+| `<C-Q>` | Next FlatTerm          | i,n,v |
+| `<C-W>` | Toggle FloatTerm       | i,n,v |
+
+### NerdComment
+
+| key     | Description                | Mode  |
+| ------- | -------------------------- | ----- |
+| `<C-C>` | create a NerdCommentToggle | i,n,v |
+
+### Telescope
+
+| key          | Description          | Mode  |
+| ------------ | -------------------- | ----- |
+| `<leader>ff` | Telescope find files | i,n,v |
+| `<leader>fg` | Telescope live grep  | i,n,v |
+| `<leader>fb` | Telescope buffers    | i,n,v |
+| `<leader>fh` | Telescope help tags  | i,n,v |
 
 ## ⚙️ Configuration
 
-## 📦 Plugins
+### 📂 File Structure
+
+You can add your custom plugin specs under nvim/plugged/. All files there will be automatically loaded by vim-plug. For more information, see configuring plugins.
+
+![Files Structure](img/File-Structure.png)
+
+### Colorscheme
+
+```viml
+set background=dark
+colorscheme tokyonight
+colorscheme tokyonight-night
+```
+
+### Default settings
+
+```viml
+inoremap <C-H> <left>
+inoremap <C-J> <down>
+inoremap <C-K> <up>
+inoremap <C-L> <right>
+" Theme configuration
+set background=dark
+colorscheme tokyonight
+colorscheme tokyonight-night
+" Lsp
+lua << END
+require'lspconfig'.pyright.setup{"pyright-langserver", "--stdio"}
+require'lspconfig'.ccls.setup{"ccls"}
+END
+
+" configuration nerdtree
+let NERDTreeQuitOnOpen=1
+nnoremap <silent> <F2> :NERDTreeFind<CR>
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
+
+" Configuration floaterm example
+let g:floaterm_keymap_new    = '<C-T>'
+let g:floaterm_keymap_prev   = '<C-A>'
+let g:floaterm_keymap_next   = '<C-Q>'
+let g:floaterm_keymap_toggle = '<C-W>'
+
+" NerdComments
+nnoremap <C-C> <plug>NERDCommenterToggle
+
+" Telescope
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Config lualine
+lua << END
+-- blankline
+require("indent_blankline").setup {
+    -- for example, context is off by default, use this to turn it on
+    space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+}
+-- bufferline
+require("bufferline").setup{}
+-- trouble settings
+require("trouble").setup()
+local actions = require("telescope.actions")
+local trouble = require("trouble.providers.telescope")
+
+local telescope = require("telescope")
+
+telescope.setup {
+  defaults = {
+    mappings = {
+      i = { ["<c-t>"] = trouble.open_with_trouble },
+      n = { ["<c-t>"] = trouble.open_with_trouble },
+    },
+  },
+}
+
+require("lualine").setup {
+  options = {
+    theme = "tokyonight",
+    icons_enabled = true,
+  },
+  sections = {
+    lualine_a = { "mode" },
+    lualine_b = { "filename" },
+    lualine_c = { "g:coc_status" },
+    lualine_x = { "branch" },
+    lualine_y = { "encoding" },
+    lualine_z = { "location" }
+  },
+}
+END
+```
+
+## 📦 Plugins List
+
+- Auto complete pairs
+- Tokyo night
+- Ident blankline
+- Lualine
+- Nerdtree
+- dev-icons
+- web dev-icons
+- git-gutter
+- tmux navigator
+- bufferline
+- vorg-md
+- float-term
+- Polyglot
+- coc
+- telescope
+- treesitter
+- lspconfig
+- trouble
