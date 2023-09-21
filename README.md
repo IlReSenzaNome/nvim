@@ -269,21 +269,21 @@ END
 
 ## 📦 Plugins List
 
-- Auto complete pairs
-- Tokyo night
-- Ident blankline
-- Lualine
-- Nerdtree
-- dev-icons
-- web dev-icons
-- git-gutter
-- tmux navigator
-- bufferline
-- vorg-md
-- float-term
-- Polyglot
-- coc
-- telescope
-- treesitter
-- lspconfig
-- trouble
+- [Auto complete pairs](https://github.com/jiangmiao/auto-pairs)
+- [Tokyo night](https://github.com/folke/tokyonight.nvim)
+- [Ident blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [Nerdtree](https://github.com/preservim/nerdtree)
+- [dev-icons](https://github.com/devicons/devicon)
+- [web dev-icons](https://github.com/nvim-tree/nvim-web-devicons)
+- [git-gutter](https://github.com/airblade/vim-gitgutter)
+- [tmux navigator](https://github.com/christoomey/vim-tmux-navigator)
+- [bufferline](https://github.com/akinsho/bufferline.nvim)
+- [vorg-md](https://github.com/bbrtj/vim-vorg-md)
+- [float-term](https://github.com/voldikss/vim-floaterm)
+- [Polyglot](https://github.com/sheerun/vim-polyglot)
+- [coc](https://github.com/neoclide/coc.nvim)
+- [telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [trouble](https://github.com/folke/trouble.nvim)
