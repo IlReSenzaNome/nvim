@@ -8,7 +8,7 @@
 <img alt="Plugin Management" src="https://img.shields.io/badge/build-Vim%20Plug-brightgreen?style=for-the-badge&logo=vim&logoColor=black&label=Plugin%20Managment">
 </p>
 
-![Editor Style](img/appearence-workspace-nvim.png)
+![appearence-workspace-nvim](https://github.com/user-attachments/assets/e70c681d-588b-431b-bcae-0e8296b2284f)
 
 ## Table of contents
 
@@ -175,7 +175,7 @@ This setup uses several key combinations to make the job of using the extensions
 
 You can add your custom plugin specs under nvim/plugged/. All files there will be automatically loaded by vim-plug. For more information, see configuring plugins.
 
-![Files Structure](img/File-Structure.png)
+![File-Structure](https://github.com/user-attachments/assets/7cb038e9-78a1-46ed-b27a-300614edd6e0)
 
 ### Colorscheme
 
